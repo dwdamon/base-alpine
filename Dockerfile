@@ -10,7 +10,7 @@ COPY rootfs /
 
 # s6 overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v1.16.0.1/s6-overlay-amd64.tar.gz /tmp/s6-overlay.tar.gz
-RUN tar xvfz /tmp/s6-overlay.tar.gz -C /
+RUN tar xvfz /tmp/s6-overlay.tar.gz -C / && apk add --update bash && rm -rf /var/cache/apk/*
 
 ##
 ## INIT

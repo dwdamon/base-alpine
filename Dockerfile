@@ -19,7 +19,7 @@ ENV JAVA_PACKAGE       jdk
 ADD https://github.com/just-containers/s6-overlay/releases/latest/download/s6-overlay-amd64.tar.gz /tmp/s6-overlay.tar.gz
 RUN apk upgrade --update --no-cache \
  && rm -rf /var/cache/apk/* \
- && tar xzf /tmp/s6overlay.tar.gz -C / \
+ && tar xzf /tmp/s6-overlay.tar.gz -C / \
  && apk add --update bash \
  && apk add --update execline
 
